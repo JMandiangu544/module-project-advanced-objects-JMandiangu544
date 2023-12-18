@@ -75,9 +75,39 @@ console.log(person.age);  // 12
     // 🧠 The initial value of `isOn` will be the Boolean false.
     // 🧠 The methods work as one might expect, changing the value of `isOn` to the appropriate Boolean.
     // 🧠 The methods also return one of these two strings: "You turned the bulb ON", or "You turned the bulb OFF".
-    class Bulb {
+    
+    class AirPlane {
+  constructor(model) {
+    this.model = model;
+    this.altitude = 0;
+  }
 
+  up(meters) {
+    this.altitude += meters;
+    return this.altitude;
+  }
+
+  down(meters) {
+    if (this.altitude - meters >= 0) {
+      this.altitude -= meters;
+    } else {
+      this.altitude = 0;
+      return "CRASH!";
     }
+    return this.altitude;
+  }
+}
+
+// Example usage:
+const airplane = new AirPlane("Boeing 747");
+console.log(airplane.model); // "Boeing 747"
+console.log(airplane.altitude); // 0
+
+console.log(airplane.up(1000)); // 1000
+console.log(airplane.down(500)); // 500
+
+console.log(airplane.down(700)); // "CRASH!"
+console.log(airplane.altitude); // 0
 
     // 👉 CHALLENGE 4
     // 🧠 Build a CountDown class that can count down starting at any number we pass to the constructor.
