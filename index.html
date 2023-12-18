@@ -123,9 +123,34 @@ console.log(airplane.altitude); // 0
     //   minusThree.count() // returns "Liftoff!"
     //   minusThree.count() // returns null
     //   minusThree.count() // returns null
+   
     class CountDown {
+  constructor(startingNumber) {
+    this.startingNumber = startingNumber;
+  }
 
+  count() {
+    if (this.startingNumber > 0) {
+      return `${this.startingNumber--}!`;
+    } else if (this.startingNumber === 0) {
+      this.startingNumber--;
+      return "Liftoff!";
+    } else {
+      return null;
     }
+  }
+}
+
+// Example usage:
+const minusThree = new CountDown(3);
+
+console.log(minusThree.count()); // "3!"
+console.log(minusThree.count()); // "2!"
+console.log(minusThree.count()); // "1!"
+console.log(minusThree.count()); // "Liftoff!"
+console.log(minusThree.count()); // null
+console.log(minusThree.count()); // null
+
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
