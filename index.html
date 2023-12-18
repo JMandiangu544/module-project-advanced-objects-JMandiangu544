@@ -65,16 +65,6 @@ console.log(person.age);  // 12
     // 🧠 Planes have a `down` method, which takes a number of meters as its argument.
     // 🧠 Calling `down` changes the `altitude` prop appropriately and returns the updated `altitude`.
     // 🧠 If calling `down` would cause the plane to go below altitude zero, `altitude` is set to 0 and the string "CRASH!" is returned.
-    class AirPlane {
-
-    }
-
-    // 👉 CHALLENGE 3
-    // 🧠 Build a Bulb class.
-    // 🧠 All new bulbs are initialised with a prop `isOn` and three methods: `turnOn`, `turnOff` and `toggle`.
-    // 🧠 The initial value of `isOn` will be the Boolean false.
-    // 🧠 The methods work as one might expect, changing the value of `isOn` to the appropriate Boolean.
-    // 🧠 The methods also return one of these two strings: "You turned the bulb ON", or "You turned the bulb OFF".
     
     class AirPlane {
   constructor(model) {
@@ -108,6 +98,15 @@ console.log(airplane.down(500)); // 500
 
 console.log(airplane.down(700)); // "CRASH!"
 console.log(airplane.altitude); // 0
+
+
+    // 👉 CHALLENGE 3
+    // 🧠 Build a Bulb class.
+    // 🧠 All new bulbs are initialised with a prop `isOn` and three methods: `turnOn`, `turnOff` and `toggle`.
+    // 🧠 The initial value of `isOn` will be the Boolean false.
+    // 🧠 The methods work as one might expect, changing the value of `isOn` to the appropriate Boolean.
+    // 🧠 The methods also return one of these two strings: "You turned the bulb ON", or "You turned the bulb OFF".
+    
 
     // 👉 CHALLENGE 4
     // 🧠 Build a CountDown class that can count down starting at any number we pass to the constructor.
