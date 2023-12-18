@@ -106,8 +106,41 @@ console.log(airplane.altitude); // 0
     // 🧠 The methods also return one of these two strings: "You turned the bulb ON", or "You turned the bulb OFF".
 
     class Bulb {
+  constructor() {
+    this.isOn = false;
+  }
 
-    }
+  turnOn() {
+    this.isOn = true;
+    return "You turned the bulb ON";
+  }
+
+  turnOff() {
+    this.isOn = false;
+    return "You turned the bulb OFF";
+  }
+
+  toggle() {
+    this.isOn = !this.isOn;
+    return this.isOn ? "You turned the bulb ON" : "You turned the bulb OFF";
+  }
+}
+
+// Example usage:
+const bulb = new Bulb();
+
+console.log(bulb.turnOn()); // "You turned the bulb ON"
+console.log(bulb.isOn);      // true
+
+console.log(bulb.turnOff()); // "You turned the bulb OFF"
+console.log(bulb.isOn);      // false
+
+console.log(bulb.toggle());  // "You turned the bulb ON"
+console.log(bulb.isOn);      // true
+
+console.log(bulb.toggle());  // "You turned the bulb OFF"
+console.log(bulb.isOn);      // false
+
 
     // 👉 CHALLENGE 4
     // 🧠 Build a CountDown class that can count down starting at any number we pass to the constructor.
